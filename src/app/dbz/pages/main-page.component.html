@@ -2,15 +2,19 @@
 <hr>
 <div class="row">
       <div class="col">
-        <dbz-list></dbz-list>
+        <!-- onDelete -->
+       <!-- <dbz-list [characterList]="dbzService.Characteres"
+                    (onDelete)="dbzService.onDeleteCharacter($event)"></dbz-list> -->
+      <dbz-list [characterList]="characters"
+                    (onDelete)="onDeleteCharacter($event)"></dbz-list>
 
-      </div>
+
+                  </div>
       <div class="col">
 
+       <!--{{Characteres}}-->
         <!-- add-character -->
-         <dbz-character></dbz-character>
-
-
+         <dbz-character (onNewCharacter)="onNewCharacter($event)" ></dbz-character>
       </div>
 </div>
 
